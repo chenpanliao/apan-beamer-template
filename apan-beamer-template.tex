@@ -19,10 +19,12 @@
 %% 中文字配置
 \usepackage[
     CJKmath=true, indentfirst=false, PunctStyle={quanjiao},
-    CheckSingle=true, SlantFont, BoldFont]{xeCJK} 
-\setCJKmainfont[Scale=1.2,BoldFeatures={FakeBold=2}]{cwTeX Q Hei Bold}
-\setCJKmonofont[Scale=1.2,BoldFeatures={FakeBold=4},
-    FakeStretch=1.015319]{cwTeX Q Yuan} 
+    CheckSingle=true, SlantFont, BoldFont]
+    {xeCJK} 
+\setCJKmainfont[Scale=1.2,BoldFeatures={FakeBold=2}]
+    {cwTeX Q Hei Bold}
+\setCJKmonofont[Scale=1.2,BoldFeatures={FakeBold=4},FakeStretch=1.015319]
+    {cwTeX Q Yuan} 
     % 欲採用 Inconsolata 為西文等寬字請採用下二列
     % \setCJKmonofont[Scale=1.2,BoldFeatures={FakeBold=4},
     %   FakeStretch=0.9869091]{cwTeX Q Yuan} 
@@ -31,7 +33,10 @@
 \let\oldfootnote\footnote
 \renewcommand\footnote[1]{\hspace{-0.7em}\oldfootnote{\ignorespaces#1}\hspace{0.5em}}
 
-\usepackage{fancyvrb, attachfile2, pstricks}
+%% 非必須 package
+%\usepackage{attachfile2}
+\usepackage{fancyvrb}
+\usepackage{pstricks}
 
 \begin{document}
 
@@ -47,6 +52,8 @@
 
 \begin{frame}{授權條款}
 \begin{center}
+
+% start of logo of cc-by-sa
 %LaTeX with PSTricks extensions
 %%Creator: inkscape 0.48.2
 %%Please note this file requires PSTricks extensions
@@ -221,6 +228,8 @@
 	}
 	}
 \end{pspicture}
+% end of logo of cc-by-sa
+
 \end{center}
 \begin{itemize}
   \item 《\href{%
@@ -329,9 +338,8 @@
 \begin{frame}{相關資源}
 \begin{block}{字體下載}
 \begin{description}
-\item[DejaVu] {\url{http://dejavu-fonts.org/wiki/Main_Page}；
-請下載最新版字體以符合本文內容。}
-\item[cwTeX-Q] {\url{http://code.google.com/p/cwtex-q-fonts/}}
+\item[DejaVu] {\url{http://dejavu-fonts.org/wiki/Main_Page}}
+\item[cwTeX-Q] {\url{https://github.com/l10n-tw/cwtex-q-fonts}}
 \end{description}
 \end{block}
 \begin{block}{相關package}
@@ -356,7 +364,7 @@
   % 在 Verbatim 中關閉 xeCJK 的中英自動間隔並啟用原始標點符號設定
   \CJKsetecglue{}\punctstyle{plain} 
   \fvset{fontsize=\footnotesize}
-  \VerbatimInput[firstline=1,lastline=38]{apan-beamer-template.tex}
+  \VerbatimInput[firstline=1,lastline=36]{apan-beamer-template.tex}
   \begin{Verbatim}
 
 \begin{document}
@@ -372,13 +380,14 @@
 \subsection{完整原始碼}
 \begin{frame}[allowframebreaks]
 \frametitle{本文件完整原始碼}
-（以 Adobe Reader/Acrobat 開啟本PDF文件可取得內嵌的原始碼。）
-\textattachfile[color=1 0 0]{\jobname{}.tex}{\jobname{}.tex}
+本文件原始碼亦可在 \url{https://github.com/chenpanliao/apan-beamer-template} 下載。
+%（以 Adobe Reader/Acrobat 開啟本PDF文件可取得內嵌的原始碼。）
+%\textattachfile[color=1 0 0]{\jobname{}.tex}{\jobname{}.tex}
 
 {
   % 在 Verbatim 中關閉 xeCJK 的中英自動間隔並啟用原始標點符號設定
   \CJKsetecglue{}\punctstyle{plain} 
-  \fvset{fontsize=\tiny, baselinestretch=1.1}
+  \fvset{fontsize=\scriptsize, baselinestretch=1.1}
   \VerbatimInput{apan-beamer-template.tex}
 }
 \end{frame}
