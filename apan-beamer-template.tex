@@ -34,7 +34,6 @@
 \renewcommand\footnote[1]{\hspace{-0.7em}\oldfootnote{\ignorespaces#1}\hspace{0.5em}}
 
 %% 非必須 package
-%\usepackage{attachfile2}
 \usepackage{fancyvrb}
 \usepackage{pstricks}
 
@@ -245,6 +244,9 @@
   \item 本文件不定期更新，請在\\
 \url{http://www.slideshare.net/chenpanliao/apan-beamertemplate}\\
 下載最新版本。
+
+  \item 本文件之原始碼可在\\
+        \url{https://github.com/chenpanliao/apan-beamer-template} 取得。
 \end{itemize}
 \end{frame}
 
@@ -364,26 +366,13 @@
   % 在 Verbatim 中關閉 xeCJK 的中英自動間隔並啟用原始標點符號設定
   \CJKsetecglue{}\punctstyle{plain} 
   \fvset{fontsize=\footnotesize}
-  \VerbatimInput[firstline=1,lastline=36]{apan-beamer-template.tex}
-  \begin{Verbatim}
-
-\begin{document}
-
-...
-
-\end{document}
-  \end{Verbatim}
-  
+  \VerbatimInput[firstline=1,lastline=38]{apan-beamer-template.tex}
 }
 \end{frame}
 
 \subsection{完整原始碼}
 \begin{frame}[allowframebreaks]
 \frametitle{本文件完整原始碼}
-本文件原始碼亦可在 \url{https://github.com/chenpanliao/apan-beamer-template} 下載。
-%（以 Adobe Reader/Acrobat 開啟本PDF文件可取得內嵌的原始碼。）
-%\textattachfile[color=1 0 0]{\jobname{}.tex}{\jobname{}.tex}
-
 {
   % 在 Verbatim 中關閉 xeCJK 的中英自動間隔並啟用原始標點符號設定
   \CJKsetecglue{}\punctstyle{plain} 
