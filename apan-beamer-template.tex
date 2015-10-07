@@ -7,8 +7,8 @@
 \linespread{1.2}
 \usepackage{arevmath}
 \usepackage[no-math]{fontspec}
-\setmainfont[Mapping=tex-text,LetterSpace=-1.0]{DejaVu Sans}
-\setsansfont[Mapping=tex-text,LetterSpace=-1.0]{DejaVu Sans}
+\setmainfont[Mapping=tex-text,LetterSpace=-1.5]{DejaVu Sans}
+\setsansfont[Mapping=tex-text,LetterSpace=-1.5]{DejaVu Sans}
 \setmonofont{DejaVu Sans Mono}
     % 欲採用 Inconsolata 為西文等寬字請採用下三列
     % \setmonofont[Scale=MatchLowercase,
@@ -21,13 +21,25 @@
     CJKmath=true, indentfirst=false, PunctStyle={quanjiao},
     CheckSingle=true, SlantFont, BoldFont]
     {xeCJK} 
-\setCJKmainfont[Scale=1.2,BoldFeatures={FakeBold=2}]
-    {cwTeX Q Hei Bold}
-\setCJKmonofont[Scale=1.2,BoldFeatures={FakeBold=4},FakeStretch=1.015319]
-    {cwTeX Q Yuan} 
+
+% 配方 1: cwTeX Q fonts
+    \setCJKmainfont[Scale=1.2,BoldFeatures={FakeBold=2}]
+        {cwTeX Q Hei Bold}
+    \setCJKmonofont[Scale=1.2,BoldFeatures={FakeBold=4},FakeStretch=1.015319]
+        {cwTeX Q Yuan} 
     % 欲採用 Inconsolata 為西文等寬字請採用下二列
     % \setCJKmonofont[Scale=1.2,BoldFeatures={FakeBold=4},
     %   FakeStretch=0.9869091]{cwTeX Q Yuan} 
+
+% 配方 2: Noto Sans CJK JP
+    %\setCJKmainfont[Scale=1.204102, BoldFeatures={}]
+    %    {Noto Sans CJK JP}
+	% \setCJKmonofont[Scale=1.204102, BoldFeatures={}]
+	%     {Noto Sans Mono CJK JP} 
+    % 欲採用 Inconsolata 為西文等寬字請採用下二列
+    %\setCJKmonofont[Scale=1.17811, BoldFeatures={}]
+    %    {Noto Sans Mono CJK JP} 
+
 
 %% 仿西式註腳風格
 \let\oldfootnote\footnote
